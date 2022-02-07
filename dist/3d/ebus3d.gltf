@@ -1,0 +1,296 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v1.6.16",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "name" : "Scene",
+            "nodes" : [
+                0,
+                1,
+                2,
+                3
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "name" : "Camera",
+            "rotation" : [
+                0.5735609531402588,
+                -0.3498750627040863,
+                0.29545438289642334,
+                0.679206907749176
+            ],
+            "translation" : [
+                -159.42904663085938,
+                30.891407012939453,
+                109.4058837890625
+            ]
+        },
+        {
+            "mesh" : 0,
+            "name" : "banchina",
+            "rotation" : [
+                -0.70710688829422,
+                0,
+                0,
+                0.7071067690849304
+            ],
+            "scale" : [
+                0.06651671230792999,
+                0.06651671230792999,
+                0.06651671230792999
+            ],
+            "translation" : [
+                -63,
+                -1.8479719074093737e-05,
+                -61
+            ]
+        },
+        {
+            "mesh" : 1,
+            "name" : "vehicles",
+            "rotation" : [
+                -0.7071067094802856,
+                0,
+                0,
+                0.7071068286895752
+            ],
+            "scale" : [
+                0.0839473232626915,
+                0.0839473232626915,
+                0.0839473232626915
+            ],
+            "translation" : [
+                -56.42472839355469,
+                -1.2371767297736369e-05,
+                59.48114013671875
+            ]
+        },
+        {
+            "mesh" : 2,
+            "name" : "office",
+            "rotation" : [
+                -0.7071067094802856,
+                0,
+                0,
+                0.7071068286895752
+            ],
+            "scale" : [
+                0.05780695378780365,
+                0.05780695378780365,
+                0.05780695378780365
+            ],
+            "translation" : [
+                54,
+                6.69292603561189e-06,
+                -55
+            ]
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Mesh_14",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1
+                    },
+                    "indices" : 2
+                }
+            ]
+        },
+        {
+            "name" : "Mesh_16",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 3,
+                        "NORMAL" : 4,
+                        "TEXCOORD_0" : 5,
+                        "COLOR_0" : 6
+                    },
+                    "indices" : 7
+                }
+            ]
+        },
+        {
+            "name" : "Mesh_0",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 8,
+                        "NORMAL" : 9
+                    },
+                    "indices" : 10
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 3184,
+            "max" : [
+                375,
+                299.09808349609375,
+                207
+            ],
+            "min" : [
+                -375,
+                -299.09808349609375,
+                0
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 3184,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5123,
+            "count" : 8136,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 10078,
+            "max" : [
+                510,
+                262.9985656738281,
+                141.91331481933594
+            ],
+            "min" : [
+                -687.8047485351562,
+                -247.497314453125,
+                -2.1559181213378906
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5126,
+            "count" : 10078,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 5,
+            "componentType" : 5126,
+            "count" : 10078,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 6,
+            "componentType" : 5123,
+            "count" : 10078,
+            "normalized" : true,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 7,
+            "componentType" : 5123,
+            "count" : 20766,
+            "type" : "SCALAR"
+        },
+        {
+            "bufferView" : 8,
+            "componentType" : 5126,
+            "count" : 8030,
+            "max" : [
+                300,
+                300,
+                192
+            ],
+            "min" : [
+                -300,
+                -300,
+                0
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 9,
+            "componentType" : 5126,
+            "count" : 8030,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 10,
+            "componentType" : 5123,
+            "count" : 21840,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 38208,
+            "byteOffset" : 0
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 38208,
+            "byteOffset" : 38208
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 16272,
+            "byteOffset" : 76416
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 120936,
+            "byteOffset" : 92688
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 120936,
+            "byteOffset" : 213624
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 80624,
+            "byteOffset" : 334560
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 80624,
+            "byteOffset" : 415184
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 41532,
+            "byteOffset" : 495808
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 96360,
+            "byteOffset" : 537340
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 96360,
+            "byteOffset" : 633700
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 43680,
+            "byteOffset" : 730060
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 773740,
+            "uri" : "ebus3d.bin"
+        }
+    ]
+}

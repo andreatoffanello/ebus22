@@ -1,0 +1,361 @@
+.nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    border-bottom: .1rem solid $component-border;
+    background: $nav-background;
+    color: $nav-text;
+    height: 100%;
+    align-items: center;
+    grid-gap: 1.6rem;
+    z-index: 3;
+    @include box-shadow;
+
+    .nav_center {
+
+    }
+
+    .nav_right {
+        padding-right: 1.6rem;
+        display: inline-grid;
+        grid-gap: .8rem;
+        grid-auto-flow: column;
+        grid-auto-columns: auto;
+        align-items: center;
+    }
+}
+
+.button_nav {
+    border-color: $primary;
+    background: transparent;
+    transition: .3s $ease;
+    cursor: pointer;
+
+    span, i {
+        color: $primary;
+        transition: .3s $ease;
+    }
+
+    &:hover {
+        background: $primary;
+        transition: .3s $ease;
+
+        span, i {
+            color: $white;
+            transition: .3s $ease;
+        }
+    }
+}
+
+.text_separator {
+    color: $primary;
+    margin-right: .6rem;
+    margin-left: .6rem;
+}
+
+.menu_button {
+    background: $primary;
+    color: $white;
+    display: grid;
+    place-items: center;
+    height: 4.8rem;
+    width: 4.8rem;
+    cursor: pointer;
+    opacity: 1;
+
+    i {
+        font-size: 2.4rem;
+        place-self: center;
+    }
+
+    &:hover {
+        opacity: .9;
+    }
+
+    .menu_icon {
+        height: 2.4rem;
+        width: 2.4rem;
+        line-height: 0;
+        transition: .5s $ease;
+
+        @-webkit-keyframes spark {
+            0% {
+                background: transparent;
+            }
+            25%{
+                background: $white;
+            }
+            50%{
+                background: $white;
+            }
+            50%{
+                background: transparent;
+            }
+        }
+
+        @keyframes spark {
+            0% {
+                background: transparent;
+            }
+            10%{
+                background: $white;
+            }
+            90%{
+                background: $white;
+            }
+            100%{
+                background: transparent;
+            }
+        }
+
+        @for $i from 1 to 9 {
+            .square:nth-child(#{$i}) {
+                -webkit-animation-delay: random() * 1s;
+                        animation-delay: random() * 1s;
+            }
+        }
+
+        .square {
+            display: inline-block;
+            position: relative;
+            width: .6rem;
+            height: .6rem;
+            border: .1rem solid $white;
+            margin: .1rem;
+            transform: rotate(0deg);
+            transition: .5s $ease;
+            opacity: 1;
+            overflow: visible;
+            -webkit-animation: spark 4s $ease infinite;
+                    animation: spark 4s $ease infinite;
+
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                background: $white;
+                border: .1rem solid $white;
+                top: -.1rem;
+                left: -.1rem;
+                height: .6rem;
+                width: .6rem;
+                opacity: 0;
+                box-sizing: border-box;
+                transition: .5s $ease;
+                transform: scale(1);
+            }
+        }
+
+        &.open {
+            transition: .5s $ease;
+            transform: scale(0.5);
+
+            .square {
+                transition: .5s $ease;
+                -webkit-animation: none;
+                        animation: none;
+
+                &:before,
+                &:after {
+                    opacity: 1;
+                    transition: .3s $ease;
+                    transition-delay: .3s;
+                }
+
+                &:nth-child(1) {
+                    transform: rotate(45deg);
+                    background: $white;
+
+                    &:before {
+                        left: -.7rem;
+                    }
+                    &:after {
+                        left: .5rem;
+                    }
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+                &:nth-child(3) {
+                    transform: rotate(45deg);
+                    background: $white;
+
+                    &:before {
+                        top: -.7rem;
+                    }
+                    &:after {
+                        top: .5rem;
+                    }
+                }
+                &:nth-child(4) {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+                &:nth-child(5) {
+                    transform: rotate(45deg);
+                    background: $white;
+                }
+                &:nth-child(6) {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+                &:nth-child(7) {
+                    transform: rotate(45deg);
+                    background: $white;
+
+                    &:before {
+                        top: .5rem;
+                    }
+                    &:after {
+                        top: -.7rem;
+                    }
+                }
+                &:nth-child(8) {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+                &:nth-child(9) {
+                    transform: rotate(45deg);
+                    background: $white;
+
+                    &:before {
+                        left: .5rem;
+                    }
+                    &:after {
+                        left: -.7rem;
+                    }
+                }
+            }
+        }
+
+    }
+
+
+}
+
+.fullscreen_menu {
+    position: fixed;
+    top: 4.8rem;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 4.8rem);
+    max-height: 0;
+    padding: 0 4.8rem 0 4.8rem;
+    background: $page-background;
+    overflow: hidden;
+    transition: .3s $ease;
+    transition-delay: .3s;
+    z-index: 9;
+
+    &.open {
+        padding: 4.8rem 4.8rem 8rem 4.8rem;
+        max-height: 100vh;
+        transition: .6s $ease;
+        overflow: auto;
+    }
+
+    .menu_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 24rem);
+        grid-gap: 6.4rem;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    @for $i from 1 to 20 {
+        a:nth-child(#{$i}) .nav_card {
+                transition-delay: 0s, .3s + ($i * 0.1s),  .3s + ($i * 0.1s);
+        }
+    }
+
+    .nav_card {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr auto;
+        border-radius: 1.6rem;
+        overflow: hidden;
+        width: 24rem;
+        height: 24rem;
+        border: 0 solid $primary;
+        opacity: 0;
+        margin-top: 6.4rem;
+        transition-duration: .3s;
+        transition-timing-function: $ease;
+
+        &.open {
+            opacity: 1;
+            margin-top: 0;
+            transition-property: border, opacity, margin-top;
+            transition-duration: .3s, 1s, 1s;
+            transition-timing-function: $ease;
+        }
+
+        &:hover {
+            border: .8rem solid $primary;
+            transition: border .6s $ease;
+
+            .item_content {
+                .item_content_bottom {
+                    max-height: 8rem;
+                    opacity: 1;
+                    transition: .6s $ease;
+                }
+            }
+        }
+
+        .img_wrapper {
+            grid-area: 1/1/3/2;
+            position: relative;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                @include vertical-gradient;
+            }
+
+            img {
+                transform: scale(1.2);
+                transition: 1s $ease;
+                height: 100%;
+                width: 100%;
+                z-index: 0;
+                -o-object-fit: cover;
+                   object-fit: cover;
+            }
+
+            &:hover {
+
+                img {
+                    transform: scale(1);
+                    transition: 2s $ease;
+                }
+            }
+        }
+
+        .item_content {
+            grid-area: 2/1/3/2;
+            z-index: 1;
+            padding: 1.2rem;
+            justify-self: center;
+
+            p {
+                color: $white;
+                font-size: 2rem;
+                text-align: center;
+                margin-bottom: .8rem;
+                @include text-shadow;
+            }
+
+            .item_content_bottom {
+                max-height: 0;
+                opacity: 0;
+                transition: .3s $ease;
+                text-align: center;
+            }
+        }
+    }
+}

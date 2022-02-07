@@ -1,0 +1,100 @@
+#app {
+    height: 100%;
+}
+
+.layout {
+    display: grid;
+    height: 100%;
+    transition: .5s $ease;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "nav nav"
+                         "side page"
+                         "side footer";
+
+    .nav {
+        grid-area: nav;
+    }
+
+    .sidebar {
+        grid-area: side;
+        z-index: 2;
+    }
+
+    .page {
+        grid-area: page;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+}
+
+.page {
+    display: grid;
+    height: 100%;
+    background: $page-background;
+    overflow: hidden;
+    transition: .5s $ease;
+
+    .main {
+        display: grid;
+        height: 100%;
+        // padding: 1.6rem;
+        grid-gap: 1.6rem;
+        overflow: hidden;
+    }
+}
+
+.component {
+    background: $component-background;
+    // border: $component-border solid .1rem;
+    // border-radius: .8rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+
+    .component_head {
+        border-bottom: .1rem solid $component-border;
+        display: grid;
+    }
+
+    .component_content {
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+
+.close_nodis {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    background: $component-background;
+    border: .2rem solid $component-border;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0;
+    transition: .3s $ease;
+
+    i {
+        font-size: $regular;
+        color: $primary;
+        transition: .3s $ease;
+    }
+
+    &:hover {
+        background: $gray-light;
+        padding: .8rem;
+        transition: .5s $ease;
+
+        i {
+            font-size: $large;
+            color: $primary;
+            transition: .5s $ease;
+        }
+    }
+}

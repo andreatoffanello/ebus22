@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1",
+        "icon": "icon_desktop",
+        "title": "Memory almost full",
+        "level": "medium",
+        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "read": false,
+        "time": "10:20"
+    },
+    {
+        "id": "2",
+        "icon": "icon_broke",
+        "title": "Vehicle damage",
+        "level": "urgent",
+        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "read": false,
+        "time": "10:12"
+    },
+    {
+        "id": "3",
+        "icon": "icon_broke",
+        "title": "Vehicle damage",
+        "level": "urgent",
+        "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "read": true,
+        "time": "10:10"
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "regularity": 70,
+        "cadence": 3,
+        "early": 1,
+        "ontime": 6,
+        "late": 8
+    }
+]

@@ -1,0 +1,8 @@
+@mixin vertical-gradient {
+    background: $primary;
+    background: linear-gradient(0deg, $primary 0%, $primary-00 100%);
+}
+
+@mixin text-shadow {
+    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+}

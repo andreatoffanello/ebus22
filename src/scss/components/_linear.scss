@@ -1,0 +1,51 @@
+.linearview {
+
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .component_head{
+        grid-auto-flow: column;
+    }
+
+    .component_content {
+        padding: 1.6rem;
+        // background: $menu-hover;
+    }
+}
+
+.horizontal_menu {
+    background: $component-menu-background;
+
+    .menu_item {
+        display: inline-grid;
+        padding: .8rem 1rem;
+        cursor: pointer;
+        grid-auto-columns: -webkit-max-content;
+        grid-auto-columns: max-content;
+        grid-auto-flow: column;
+        grid-gap: .6rem;
+
+        &:hover {
+            background: $head-background;
+
+            span, i {
+                color: $primary;
+            }
+        }
+
+        span, i {
+            font-weight: 600;
+            font-size: $small;
+            color: $gray;
+        }
+    }
+}
+
+.linear_wrapper {
+    height: 100%;
+    width: 100%;
+    border-radius: .8rem;
+    // background: $page-background;
+}

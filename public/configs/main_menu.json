@@ -1,0 +1,63 @@
+[
+    {
+        "name": "Home",
+        "url": "/",
+        "imgUrl": "../images/home.jpg"
+    },
+    {
+        "name": "Linear View",
+        "url": "/linear",
+        "imgUrl": "../images/home.jpg"
+    },
+    {
+        "name": "Deposit",
+        "url": "/deposit",
+        "imgUrl": "../images/home.jpg"
+    },
+    {
+        "name": "Plan Table",
+        "url": "/plantable",
+        "imgUrl": "../images/home.jpg"
+    },
+    {
+        "name": "Cartographic",
+        "url": "/cartographic",
+        "imgUrl": "../images/home.jpg"
+    },
+    {
+        "name": "Service List",
+        "url": "/servicelist",
+        "imgUrl": "../images/home.jpg"
+    },
+    {
+        "name": "Diagnostic",
+        "url": "/diagnostic",
+        "imgUrl": "../images/home.jpg"
+    },
+    {
+        "name": "Synoptic View",
+        "url": "/synoptic",
+        "imgUrl": "../images/home.jpg"
+    },
+    {
+        "name": "Anomalies",
+        "url": "/anomalies",
+        "imgUrl": "../images/home.jpg"
+    },
+    {
+        "name": "Reports",
+        "url": "/reports",
+        "imgUrl": "../images/home.jpg"
+    },
+    {
+        "name": "Planification",
+        "url": "/planification",
+        "imgUrl": "../images/home.jpg"
+    },
+    {
+        "name": "Departures Table",
+        "url": "/departures",
+        "imgUrl": "../images/home.jpg"
+    }
+
+]

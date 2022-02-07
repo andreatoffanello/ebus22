@@ -1,0 +1,245 @@
+.sidebar {
+    background: $sidebar-background;
+    border-right: .1rem solid $component-border;
+    height: 100%;
+    padding-top: 1.6rem;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    @include box-shadow;
+}
+
+.sidebar_icon {
+    color: $sidebar-icons;
+    display: grid;
+    height: 4.7rem;
+    width: 4.7rem;
+    cursor: pointer;
+    position: relative;
+    transition: .2s $ease;
+
+    i {
+        opacity: .7;
+        grid-area: 1/1/2/2;
+        font-size: 2.4rem;
+        place-self: center;
+    }
+
+    &:hover {
+        background: $sidebar-icons-hover;
+
+        i {
+            opacity: 1;
+            transition: .5s $ease;
+        }
+
+    }
+
+    .counter {
+        grid-area: 1/1/2/2;
+        font-size: $xsmall;
+        font-weight: 800;
+        position: absolute;
+        top: .4rem;
+        right: .4rem;
+        background: $primary;
+        color: $white;
+        padding: .4rem;
+        min-width: 1.8rem;
+        min-height: 1.8rem;
+        border-radius: 2rem;
+        display: grid;
+        place-items: center;
+        border: .1rem solid $component-border;
+    }
+}
+
+
+.sidebar_panel {
+    position: fixed;
+    height: calc(100% - 4.8rem);
+    width: 0;
+    top: 4.8rem;
+    left: 0;
+    border: .1rem solid $component-border;
+    background: $component-background;
+    z-index: 1;
+    overflow: hidden;
+    transition: .2s $ease;
+    transition-delay: .2s;
+
+    .notifications,
+    .messages {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        height: 100%;
+        opacity: 0;
+        transition: .2s $ease;
+    }
+
+    .close_panel {
+        display: grid;
+        place-items: center;
+        background: $primary;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        right: -3.3rem;
+        width: 3.2rem;
+        height: 3.2rem;
+        cursor: pointer;
+        transition: .2s $ease;
+
+        i {
+            color: $white;
+            font-size: $regular;
+        }
+
+        &:hover {
+            background: $primary-hover;
+            transition: .3s $ease;
+        }
+    }
+
+
+    &.open {
+        left: 4.8rem;
+        transition: .3s $ease;
+        overflow: visible;
+
+        .notifications,
+        .messages {
+            opacity: 1;
+            transition: .3s $ease;
+            transition-delay: .3s;
+        }
+
+        .close_panel {
+            opacity: 1;
+            transition: .3s $ease;
+        }
+
+        &.w32 {
+            width: 32rem;
+        }
+
+        &.w64 {
+            width: 64rem;
+        }
+    }
+}
+
+
+
+.notif_wrapper {
+    overflow-y: auto;
+}
+
+.notif {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    padding: .8rem;
+    grid-gap: .8rem;
+    position: relative;
+    border-bottom: .1rem solid $component-border;
+    grid-template-areas: "icon title title chip"
+                         "icon time link link";
+    cursor: pointer;
+
+    &:hover {
+        background: $gray-light;
+        transition: .3s solid $ease;
+    }
+
+    .title {
+        grid-area: title;
+        color: $gray;
+    }
+
+    .time {
+        grid-area: time;
+        color: $gray;
+    }
+
+    .link {
+        grid-area: link;
+        text-align: right;
+        color: $gray;
+    }
+
+    .chip {
+
+    }
+
+    .icon_wrapper {
+        grid-area: icon;
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        background: $component-background;
+        border: .1rem solid;
+
+        i {
+            font-size: 2rem;
+            color: $white;
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: .4rem;
+        height: 100%;
+        background: $primary;
+    }
+
+    &.urgent {
+
+        &:after {
+            background: $red;
+        }
+
+        .icon_wrapper {
+            border-color: $red;
+
+            i {
+                color: $red;
+            }
+        }
+    }
+
+    &.medium {
+
+        &:after {
+            background: $yellow;
+        }
+
+        .icon_wrapper {
+            border-color: $yellow;
+
+            i {
+                color: $yellow;
+            }
+        }
+    }
+}
+
+
+.panel_header {
+    padding: .8rem;
+    border-bottom: .1rem solid $component-border;
+
+    span {
+        color: $primary;
+    }
+}
+
+.panel_bottom {
+    border-top: .1rem solid $component-border;
+    padding: .8rem .8rem 1.6rem;
+    text-align: center;
+}

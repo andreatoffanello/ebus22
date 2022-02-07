@@ -1,0 +1,255 @@
+.kpi {
+    background: $component-background;
+
+    .component_content {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr auto;
+    }
+
+    .component_footer {
+
+    }
+}
+
+.expander_button {
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background: $component-background;
+    border-left: .1rem solid $component-border;
+    cursor: pointer;
+
+    .expander_icons {
+        width: 2.4rem;
+        display: grid;
+        font-size: $small;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 0;
+        transition: .3s $ease;
+        justify-items: center;
+
+        i {
+            transform: scaleY(1);
+            transform-origin: 0% 0%;
+            transition: .3s $ease;
+            transform-origin: 50% 50%;
+            color: $sidebar-icons;
+
+            &:nth-child(1) {
+                align-self: end;
+            }
+            &:nth-child(2) {
+                align-self: start;
+            }
+        }
+
+        &.enlarge {
+
+            i {
+                transform: scaleY(-1);
+                transform-origin: 50% 50%;
+                transition: .3s $ease;
+            }
+        }
+    }
+
+    &:hover {
+        background: $sidebar-icons-hover;
+
+        .expander_icons {
+            grid-gap: .8rem;
+            transition: .3s $ease;
+        }
+    }
+}
+
+.kpi_grid {
+    display: grid;
+    grid-auto-columns: -webkit-min-content;
+    grid-auto-flow: column;
+    grid-auto-columns: min-content;
+    grid-gap: 1.6rem;
+    align-items: center;
+    height: auto;
+    padding: .8rem .8rem 1.6rem;
+
+    .kpi_label {
+        color: $kpi_text;
+        font-size: $small;
+        font-weight: 700;
+        display: inline-grid;
+        grid-auto-flow: column;
+        grid-auto-columns: -webkit-max-content;
+        grid-auto-columns: max-content;
+        grid-gap: .4rem;
+        align-items: center;
+        height: 2.4rem;
+        transition: .5s $ease;
+
+        .number {
+            font-size: $small;
+            color: $white;
+            padding: .4rem .6rem;
+            border-radius: .4rem;
+            background: $primary;
+            @include text-shadow;
+        }
+
+        .percentage {
+            font-weight: 300;
+        }
+
+        .number,
+        .percentage {
+            opacity: 1;
+            max-width: 6rem;
+            transition: .5s $ease;
+
+            &.nobkg {
+                color: $primary !important;
+                background: transparent !important;
+            }
+
+        }
+    }
+
+    .block_circle {
+        opacity: 0;
+        height: 0;
+        transition: .5s $ease;
+        overflow: hidden;
+    }
+
+    &.enlarge {
+
+        .kpi_label {
+            grid-gap: 0;
+            transition: .5s $ease;
+
+            .number,
+            .percentage {
+                padding: 0;
+                opacity: 0;
+                max-width: 0;
+                transition: .5s $ease;
+            }
+        }
+
+        .block_circle {
+            opacity: 1;
+            height: 10rem;
+            transition: .5s $ease;
+        }
+    }
+}
+
+.kpi_block {
+    justify-items: center;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    width: 12rem;
+    transition: .5s $ease;
+
+    &.early {
+        .circle {
+            stroke: $early;
+        }
+        .block_circle .number {
+            color: $early;
+        }
+        .kpi_label .number {
+            background: $early;
+        }
+    }
+
+    &.ontime {
+        .circle {
+            stroke: $ontime;
+        }
+        .block_circle .number {
+            color: $ontime;
+        }
+        .kpi_label .number {
+            background: $ontime;
+        }
+    }
+
+    &.late {
+        .circle {
+            stroke: $late;
+        }
+        .block_circle .number {
+            color: $late;
+        }
+        .kpi_label .number {
+            background: $late;
+        }
+    }
+    &.primary {
+        .circle {
+            stroke: $primary;
+        }
+        .block_circle .number {
+            color: $primary;
+        }
+        .kpi_label .number {
+            background: $primary;
+        }
+    }
+}
+
+.block_circle {
+    display: grid;
+    min-width: 10rem;
+}
+
+.circle_wrap {
+    grid-area: 1/1/2/2;
+    place-self: center;
+    height: 10rem;
+    min-width: 10rem;
+}
+
+.circle,
+.base {
+    fill: transparent;
+    stroke: $gray-light;
+    stroke-width: .2rem;
+    transform: rotate(90deg);
+    transform-origin: 50% 50%;
+    stroke-linecap: round;
+    transition: 1s $ease;
+
+    &.transparent {
+        stroke: transparent!important;
+    }
+}
+
+.circle_data {
+    grid-area: 1/1/2/2;
+    place-self: center;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    align-items: center;
+
+    .number {
+        color: $gray;
+        font-size: $regular;
+        font-weight: 600;
+    }
+
+    .percentage {
+        color: $gray;
+        font-size: $small;
+    }
+
+    .divider {
+        width: 2.4rem;
+        height: .2rem;
+        background: $gray-light;
+        margin: .8rem auto;
+        display: inline-block;
+    }
+}

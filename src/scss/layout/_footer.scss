@@ -1,0 +1,17 @@
+.footer {
+    border-top: .1rem solid $component-border;
+    z-index: 1;
+}
+
+.footer_time {
+    place-self: center;
+    height: 4.8rem;
+    width: 9.6rem;
+    display: inline-grid;
+    grid-template-row: auto 1fr;
+    place-items: center;
+
+    .time {
+        font-size: $regular;
+    }
+}

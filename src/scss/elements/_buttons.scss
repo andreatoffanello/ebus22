@@ -1,0 +1,57 @@
+.button {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-gap: .8rem;
+    padding: .6rem 1.2rem;
+    border-radius: 8rem;
+    border: .1rem solid $white;
+    cursor: pointer;
+
+    span, i {
+        font-size: $small;
+        color: $white;
+    }
+
+    &.primary {
+        border: .1rem solid $primary;
+
+        span, i {
+            color: $primary;
+        }
+
+        &:hover {
+            background: $primary;
+
+            span, i {
+                color: $white;
+            }
+        }
+    }
+
+    &.dismiss {
+        border: .1rem solid $gray;
+
+        span, i {
+            color: $gray;
+        }
+
+        &:hover {
+            background: $gray;
+
+            span, i {
+                color: $white;
+            }
+        }
+    }
+
+    &.disabled {
+        border: .1rem solid $gray;
+        background: $gray;
+        pointer-events: none;
+        opacity: .5;
+
+        span, i {
+            color: $white;
+        }
+    }
+}

@@ -1,0 +1,117 @@
+:root {
+    --blue:    hsla(213, 100%, 50%, 1);
+    --blue-hover: hsla(213, 100%, 54%, 1);
+    --blue-75: hsla(213, 75%, 50%, 1);
+    --blue-50: hsla(213, 50%, 50%, 1);
+    --blue-25: hsla(213, 25%, 50%, 1);
+    --blue-10: hsla(213, 10%, 50%, 1);
+    --blue-00: hsla(213, 100%, 50%, 0);
+
+    --dark: hsla(213, 100%, 10%, 1);
+    --light: hsla(213, 15%, 97%, 1);
+    --blue-light: hsla(213, 100%, 75%, 1);
+
+    --white-full: #ffffff;
+    --white: #fafafa;
+    --gray-light: hsla(213, 10%, 95%, 1);
+    --black: hsla(213, 10%, 5%, 1);
+
+    --gray: hsla(213, 10%, 15%, 1);
+    --gray-75: hsla(213, 10%, 75%, 1);
+    --gray-50: hsla(213, 10%, 50%, 1);
+
+
+    &[data-theme="light"] {
+        --primary: var(--blue);
+        --primary-00: var(--blue-00);
+        --page-background: var(--white-full);
+
+        --component-background: var(--white);
+        --component-border: var(--gray-light);
+        --component-menu-background: var(--component-background);
+
+        --text-color:var(--gray);
+        --white-color: var(--white-full);
+
+        --nav-background: var(--white-full);
+        --nav-text: var(--black);
+
+        --sidebar-background: var(--light);
+        --kpi-text: var(--gray-50);
+
+        --sidebar-icons: var(--blue);
+        --sidebar-icons-hover: var(--gray-light);
+
+        --popup-head-background: var(--blue);
+    }
+
+    &[data-theme="dark"] {
+        --primary: var(--blue);
+        --primary-00: var(--blue-00);
+        --page-background: var(--black);
+
+        --component-background: var(--black);
+        --component-border: var(--blue-10);
+        --component-menu-background: var(--dark);
+
+        --text-color:var(--white);
+        --white-color: var(--white);
+
+        --nav-background: var(--black);
+        --nav-text: var(--white);
+
+        --sidebar-background: var(--black);
+        --kpi-text: var(--white);
+
+        --sidebar-icons: var(--white);
+        --sidebar-icons-hover: var(--blue-10);
+
+        --popup-head-background: var(--blue);
+    }
+}
+
+
+
+$primary: var(--primary);
+$primary-hover: var(--blue-hover);
+$primary-00: var(--primary-00);
+$white: var(--white-color);
+
+$text-color: var(--text-color);
+
+$page-background: var(--page-background);
+
+$sidebar-background: var(--sidebar-background);
+$sidebar-icons: var(--sidebar-icons);
+$sidebar-icons-hover: var(--sidebar-icons-hover);
+
+$nav-background: var(--nav-background);
+$nav-text: var(--nav-text);
+
+$component-background: var(--component-background);
+$component-border: var(--component-border);
+$component-menu-background: var(--component-menu-background);
+
+$head-background: var(--light);
+$dark-background: var(--dark);
+
+$menu-hover: var(--gray-75);
+$gray-light: var(--gray-light);
+$gray: var(--gray-50);
+$text-color: var(--text-color);
+
+$kpi_text: var(--kpi-text);
+
+$popup-background: var(--popup-head-background);
+
+
+$early: #FFCB00;
+$late: #00008B;
+$ontime: #0AAD0A;
+
+
+$red: hsla(0, 100%, 43%, 1);
+$red-50: hsla(0, 100%, 43%, 0.2);
+
+$yellow: hsla(51, 100%, 48%, 1);
+$yellow-50: hsla(51, 100%, 48%, 0.2);
